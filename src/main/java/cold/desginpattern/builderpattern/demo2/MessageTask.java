@@ -1,4 +1,4 @@
-package cold.desginpattern.builderpattern;
+package cold.desginpattern.builderpattern.demo2;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

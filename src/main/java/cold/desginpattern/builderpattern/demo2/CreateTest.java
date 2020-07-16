@@ -1,9 +1,9 @@
-package cold.desginpattern.builderpattern;
+package cold.desginpattern.builderpattern.demo2;
 
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Description: design-pattern-demo
+ * Description: design-pattern-demo1
  * <p>
  * Created by ys on 2020/7/16 10:35
  */
