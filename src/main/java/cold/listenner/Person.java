@@ -34,4 +34,10 @@ public class Person {
     public String toString() {
         return relation+nickName;
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("被回收了");
+        super.finalize();
+    }
 }
