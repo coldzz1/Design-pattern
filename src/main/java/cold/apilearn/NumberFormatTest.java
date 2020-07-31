@@ -12,28 +12,29 @@ public class NumberFormatTest {
     public static void main(String[] args) {
         double pi = 3.1415927;//圆周率
 
-        //取一位整数
-        System.out.println(new DecimalFormat("0").format(pi));
-
-        //取一位整数和两位小数
+        //整数部分保留1位小数保留2位
         System.out.println(new DecimalFormat("0.00").format(pi));
+
+        //取整数部分
+        System.out.println(new DecimalFormat("0").format(pi));
 
         //取两位整数和三位小数,整数不足部分以0填补
         System.out.println(new DecimalFormat("00.00").format(pi));
 
-        //取所有整数部分
-        System.out.println(new DecimalFormat("#.00").format(pi));
 
-        //以百分比方式计数,并取两位小数
+        long gs = 712453654;//每三位以逗号分隔
+        System.out.println(new DecimalFormat("每秒以,000米").format(gs));
+
+
+        double p = 55.1212453;//保留所有整数部分 小数部分保留3位小数
+        System.out.println(new DecimalFormat("#.000").format(p));
+
+
+        //科学计数法保留两位小数
+        System.out.println(new DecimalFormat("0.00E0").format(gs));
+
+
+        //取百分号 并保留两位小数
         System.out.println(new DecimalFormat("#.00%").format(pi));
-        long c = 299792458 ;
-        //以科学计数法 取5位小数
-        System.out.println(new DecimalFormat("0.00000E0").format(c));
-        System.out.println(new DecimalFormat("00.00000E0").format(c));
-        //每三位以逗号进行分隔
-        System.out.println(new DecimalFormat(",000").format(c));
-
-        //将格式嵌入文本
-        System.out.println(new DecimalFormat("光速为每秒,000米").format(c));
     }
 }
