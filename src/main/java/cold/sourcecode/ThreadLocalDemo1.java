@@ -18,6 +18,7 @@ public class ThreadLocalDemo1 {
     private static ThreadLocal<DecimalFormat> df = ThreadLocal.withInitial(() -> new DecimalFormat("#.00%"));
 
     public static void main(String[] args) {
+        System.out.println(5%2);
         DecimalFormat decimalFormat = df.get();
         System.out.println(decimalFormat.format(0.980149));
         String date = "2020-07-30";

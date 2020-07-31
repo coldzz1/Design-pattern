@@ -1,8 +1,6 @@
-package cold.sf.queue;
+package cold.datastruc.collcetion.queue;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 import java.util.PriorityQueue;
 
 /**
