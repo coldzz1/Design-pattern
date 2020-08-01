@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Supplier;
 
 /**
  * Description:
@@ -12,6 +13,10 @@ import java.util.Map;
  * Created by kele on 2020/8/1 10:03
  */public class DateUtil {
 
+    public static void main(String[] args) {
+        System.out.println(getSdf("yyy-mm"));
+        System.out.println(getSdf("yyy-ddd"));
+    }
     /** 锁对象 */
     private static final Object lockObj = new Object();
 
@@ -37,7 +42,6 @@ import java.util.Map;
 
                     // 这里是关键,使用ThreadLocal<SimpleDateFormat>替代原来直接new SimpleDateFormat
                     tl = new ThreadLocal<SimpleDateFormat>() {
-
                         @Override
                         protected SimpleDateFormat initialValue() {
                             System.out.println("thread: " + Thread.currentThread() + " init pattern: " + pattern);
