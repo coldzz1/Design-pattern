@@ -10,7 +10,7 @@ public class MergeSort {
 
 
     public static void main(String[] args) {
-        int [] array ={9,4,2,5,1,3,2,1,2};
+        int [] array ={0,1,2,4,3,29,8,7,6,5,4,3,2,1,0};
         merge_sort(array,array.length);
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
@@ -64,7 +64,7 @@ public class MergeSort {
        }
 
        //把排好序的数组拷贝回原数组a[p...r]
-        for (int l = 0; l < r-p; l++) {
+        for (int l = 0; l < temp.length; l++) {
             origin[p+l]=temp[l];
         }
 
