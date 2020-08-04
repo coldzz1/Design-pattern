@@ -1,5 +1,7 @@
 package cold.apilearn;
 
+import org.springframework.util.StringUtils;
+
 import java.text.DecimalFormat;
 
 /**
@@ -9,6 +11,31 @@ import java.text.DecimalFormat;
  */
 public class NumberFormatTest {
 
+
+
+    public static void judgeLength(String number){
+        if(StringUtils.isEmpty(number)){
+            System.out.println("为空");
+        }
+        //注意DecimalFormat只能对long double 操作
+        Double num;
+        try {
+             num = Double.valueOf(number);
+        }catch (NumberFormatException e){
+            System.out.println("非数字:"+number+"转化失败");
+            throw e;
+        }
+        if(new DecimalFormat("#").format(num).length()>=9){
+            System.out.println("亿");
+        }
+        if(new DecimalFormat("#").format(num).length()>=5){
+            System.out.println("万");
+        }
+        if(new DecimalFormat("#").format(num).length()>=3){
+            System.out.println("百");
+        }
+
+    }
     public static void main(String[] args) {
         double pi = 3.1415927;//圆周率
 
