@@ -50,7 +50,7 @@ public class NumberFormatTest {
 
 
         long gs = 712453654;//每三位以逗号分隔
-        System.out.println(new DecimalFormat("每秒以,000米").format(gs));
+        System.out.println(new DecimalFormat("每秒以,000.#米").format(gs));
 
 
         double p = 55.1212453;//保留所有整数部分 小数部分保留3位小数
